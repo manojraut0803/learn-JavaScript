@@ -42,5 +42,17 @@ console.log(typeof stringNum);
 // 1 => true | 0 => false
 // "22" = 22
 
+// *********************operation*************************
 
+console.log("1" + 2 + 2);
+console.log(1 + 2 + "2");
+console.log(+true);
+console.log(+"");
+
+// prefix post
+let age = 21
+age++
+console.log(age)
+++age
+console.log(age)
 
