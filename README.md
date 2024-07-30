@@ -5,6 +5,8 @@ variable
 "use strict"
 data types
 data type conversion
+memory a) stack b) heap
+
 
 
 
@@ -20,6 +22,8 @@ data type conversion
 - 
 
 ### Data Types
+
+#### [1] Seven primitive data types
 - Number  => 2 to power 53
 - BigInt
 - String  => ""  
@@ -27,7 +31,10 @@ data type conversion
 - null    => standalone value
 - undefined
 - Symbol  => unique
-- Object
+#### [2] one non-primitive data type (Reference)
+- Objects
+- Array
+- Functions
 ```
 >> typeof undefined ==> undefined
 >> typeof null ==> Object
@@ -69,5 +76,11 @@ null	                        0
 true and false	                1 and 0
 0, null, undefined, NaN, ""	    false
 any other value	                true
+```
+
+### Memory  Stack | Heap
+```
+1] Stack => Premitive       copy | not changes
+2] Heap  => Non Premitive   reference | changes in original value
 
 ```
