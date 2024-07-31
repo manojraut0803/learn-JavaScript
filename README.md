@@ -6,6 +6,7 @@ variable
 data types
 data type conversion
 memory a) stack b) heap
+Strings
 
 
 
