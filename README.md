@@ -7,9 +7,11 @@ data types
 data type conversion
 memory a) stack b) heap
 Strings
-
-
-
+Array
+Number
+Date Time
+Objects
+JSON API
 
 
 ```
