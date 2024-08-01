@@ -11,7 +11,21 @@ Array
 Number
 Date Time
 Objects
+Destructuring
 JSON API
+Functions
+parameter
+fn with Object and Array
+scope Global and Local
+scope level and hoisting
+this [object]
+arrow function
+IIFE ()()
+How does JS Execute Code
+Call stack
+Control flow in JS
+
+
 
 
 ```
@@ -85,5 +99,97 @@ any other value	                true
 ```
 1] Stack => Premitive       copy | not changes
 2] Heap  => Non Premitive   reference | changes in original value
+```
+
+## How does JS Execute Code
+### JavaScript Execution Context
+
+JS -> Single Threaded
+
+
+[.js file] -> 
+
+>(1) Global Execution Context -> this
+    
+Browser -> Window object
+
+node env-> {}
+
+>(2) Functional Execution Context
+
+>(3) Eval Execution Context
+
+>Run In - 2 Phases
+>>(1) Memory Creation Phase
+
+>>(2) Execution Phase
 
 ```
+let val1 = 10
+let val2 = 5
+function addNum(num1, num2){
+    let total = num1 + num2
+    return total
+}
+let result1 = addNum(val1, val2)
+let result2 = addNum(6, 4)
+```
+
+#### (1) Global Execution Context -> this
+
+>(1) Memory Creation Phase
+```
+val1 -> undefined
+val2 -> undefined
+addNum -> defination (function)
+result1 -> undefined
+result2 -> undefined
+```
+
+>(2) Execution Phase
+```
+val1 <- 10
+val2 <- 5
+addNum -> [new variable environment + execution thread ] execution context
+    >> (1) memory phase
+    >> (2) execution phase 
+
+result1 <- 15
+
+addNum -> [new variable environment + execution thread ] execution context
+    >> (1) memory phase
+    >> (2) execution phase 
+    
+result2 <- 10
+
+[A] addNum(num1, num2)
+(1) memory phase [ memory allocation ]
+val1 -> undefined
+val2 -> undefined
+total -> undefined
+
+(2) execution phase [ Mathematical operation + proceesing ]
+num1 <- 10
+num2 <- 5
+total <- 15
+    return [ Global Execution Context ]
+
+[A] addNum(6, 4)
+(1) memory phase [ memory allocation ]
+num1 -> undefined
+num2 -> undefined
+total -> undefined
+
+(2) execution phase [ Mathematical operation + proceesing ]
+num1 <- 6
+num2 <- 4
+total <- 10
+    return [ Global Execution Context ]
+
+
+```
+
+
+
+
+## Call stack
