@@ -30,6 +30,8 @@ while and do while loop
 High order array loop
 Filter map 
 Reduce
+DOM
+
 
 
 
@@ -259,5 +261,15 @@ const var = arr.map( (val)=> val + 2 )
 const array = [1, 2, 3, 4]
 const initialValue = 0
 const sumWithInitial = array.reduce((accumulator, currentValue)=> accumulator + currentValue, initialValue);
+```
 
+## DOM
+```
+Document Object Model
+
+getElementBy...
+getattribute
+setattribute
+querySelector
+querySelectorAll
 ```

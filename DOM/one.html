@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Learning</title>
+    <style>
+        .bg-black {
+            background: #212121;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body class="bg-black">
+
+    <div>
+        <h1 id="demo" class="heading">DOM learning <span style="display: none;">with basics</span></h1>
+        <p>Lorem ipsum dolor sit.</p>
+    </div>
+    <input type="password" name="" id="">
+
+    <ul>
+        <li>one1</li>
+        <li>two2</li>
+        <li>three3</li>
+    </ul>
+
+</body>
+
+</html>
+
+<script>
+    document.getElementById("demo").innerHTML = "hello from DOM"
+
+    document.write(document.getElementById("demo").id)
+    document.write(document.getElementById("demo").className)
+    document.write(document.getElementById("demo").getAttribute("id"))
+    document.write(document.getElementById("demo").getAttribute("class"))
+    document.getElementById("demo").setAttribute("class", "test heading")
+
+    const demo = document.getElementById("demo")
+    demo.style.backgroundColor = "white"
+    demo.style.color = "black"
+    demo.style.padding = "100px"
+    demo.style.margin = "0"
+    demo.style.textAlign = "center"
+
+    document.write(demo.innerHTML)
+    document.write(demo.textContent)            // difference btw textContent and innerText
+    document.write(demo.innerText)
+
+    // Query Selectors
+    document.write(document.querySelector("h1"))
+    document.write(document.querySelector("#demo"))
+    document.write(document.querySelector("input[type='password']"))
+    document.write(document.querySelectorAll("li"))
+
+
+document.querySelector
+
+
+</script>
