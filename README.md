@@ -24,6 +24,11 @@ IIFE ()()
 How does JS Execute Code
 Call stack
 Control flow in JS
+for loop 
+break and continue
+while and do while loop
+High order array loop
+
 
 
 
@@ -188,8 +193,42 @@ total <- 10
 
 
 ```
-
-
-
-
 ## Call stack
+```
+
+```
+
+### High order array loop
+
+1) for of
+```
+["", "", ""]
+[{}, {}, {}]
+
+for ( const iterator of object){
+
+}
+
+used for -> array , string, map
+```
+
+2) for in
+```
+for (const iterator in object){
+
+}
+
+used for -> array -> myarray[key] || object -> myObj[key]
+```
+
+3) for each
+```
+1) Array
+2) Object
+
+obj/arr.forEach(callback function){
+
+}
+eg.
+myObj.forEach( ()=> {})
+```
