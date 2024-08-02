@@ -96,7 +96,7 @@ function printMe(item) {
 
 // IMP
 coding.forEach((item, idex, arr) => {
-//   console.log(item, idex, arr);
+  //   console.log(item, idex, arr);
 });
 
 const myLearnings = [
@@ -114,8 +114,134 @@ const myLearnings = [
   },
 ];
 
-myLearnings.forEach( (item)=>{
-    console.log(item.language);
-    console.log(item.languageFileName);
-})
+myLearnings.forEach((item) => {
+  // console.log(item.language);
+  // console.log(item.languageFileName);
+});
 
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// const codings = ["JS", "python", "Go"];
+// const values = codings.forEach((items)=>{
+//   // console.log(items);
+//   return items
+// })
+// console.log(values);    // undefined
+
+// (((((((((((((((((((((((((((((((((((((( filter ))))))))))))))))))))))))))))))))))))))
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 10];
+
+// const newNumbers = numbers.filter((num)=> num > 7);
+// console.log(newNumbers);
+
+// explicit return
+const newNumbers = numbers.filter((num) => {
+  return num > 7;
+});
+// console.log(newNumbers);
+
+const newNum = [];
+numbers.forEach((num) => {
+  if (num > 7) {
+    newNum.push(num);
+  }
+});
+// console.log(newNum);
+
+const books = [
+  {
+    title: "To Kill a Mockingbird",
+    genre: "Fiction",
+    publish_year: 1960,
+    edition: 1,
+  },
+  {
+    title: "1984",
+    genre: "Dystopian",
+    publish_year: 1949,
+    edition: 1,
+  },
+  {
+    title: "The Great Gatsby",
+    genre: "Fiction",
+    publish_year: 1925,
+    edition: 1,
+  },
+  {
+    title: "Harry Potter and the Sorcerer's Stone",
+    genre: "Fantasy",
+    publish_year: 1997,
+    edition: 1,
+  },
+  {
+    title: "The Catcher in the Rye",
+    genre: "Fiction",
+    publish_year: 1951,
+    edition: 1,
+  },
+];
+
+// const userBooks = books.filter((bk)=> bk.genre == "Fiction")
+// console.log(userBooks);
+
+const userBooks = books.filter((bk) => {
+  return bk.publish_year >= 1950;
+});
+// console.log(userBooks);
+
+const numb = [1, 2, 3, 4, 5, 6, 7, 8, 10];
+
+// const newNumb = numb.map((val) => val + 10);
+// console.log(newNumb);
+
+// chaining
+const newNumb = numb
+  .map((val) => val * 10)
+  .map((val) => val + 1)
+  .filter((val) => val > 50);
+// console.log(newNumb);
+
+// (((((((((((((((((((((((((((((((((((((( reduce ))))))))))))))))))))))))))))))))))))))
+
+const array = [1, 2, 3];
+// const sumWithInitial = array.reduce(function (acc, currValue){
+//   console.log(`acc: ${acc} and currValue: ${currValue}`);
+//   return acc + currValue
+// }, 0);
+// console.log(sumWithInitial);
+
+const initialValue = 0;
+const sumWithInitial = array.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue
+);
+
+// console.log(sumWithInitial);
+
+
+const shoppingCart = [
+  {
+      "itemName": "JS",
+      "price": 2999
+  },
+  {
+      "itemName": "Data Scince",
+      "price": 12999
+  },
+  {
+      "itemName": "Python",
+      "price": 999
+  },
+  {
+      "itemName": "AIML",
+      "price": 10000
+  },
+  {
+      "itemName": "Mobile Dev",
+      "price": 5999
+  }
+]
+
+const totalPriceToPay = shoppingCart.reduce((acc, item )=> acc + item.price , 0)
+console.log(totalPriceToPay);

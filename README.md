@@ -28,6 +28,8 @@ for loop
 break and continue
 while and do while loop
 High order array loop
+Filter map 
+Reduce
 
 
 
@@ -231,4 +233,31 @@ obj/arr.forEach(callback function){
 }
 eg.
 myObj.forEach( ()=> {})
+```
+
+### filter map
+```
+filter
+const var = arr.filter( (val)=> val > 2 )
+                or
+const var = arr.filter( (val)=> {
+     return val > 2 
+})
+
+map
+const var = arr.map( (val)=> val + 2 )
+```
+
+## chaining
+
+```
+.map().map().filter()
+```
+
+## reduce
+```
+const array = [1, 2, 3, 4]
+const initialValue = 0
+const sumWithInitial = array.reduce((accumulator, currentValue)=> accumulator + currentValue, initialValue);
+
 ```
