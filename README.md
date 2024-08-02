@@ -31,9 +31,8 @@ High order array loop
 Filter map 
 Reduce
 DOM
-
-
-
+Relation in DOM
+create edit remove element in DOM
 
 
 
@@ -272,4 +271,19 @@ getattribute
 setattribute
 querySelector
 querySelectorAll
+etc.
 ```
+### create a new element
+
+### Relations in DOM
+```
+Parent child relation
+Child parent relation
+Child child relation
+```
+### create new element
+
+### edit and remove element
+
+
+

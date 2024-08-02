@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM || edit and remove</title>
+</head>
+
+<body>
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    // create a new element
+
+    function addLanguage(langName) {
+        const li = document.createElement("li")
+        li.innerHTML = `${langName}`                // Traversing
+        document.querySelector(".language").append(li)
+        // console.log(li)
+    }
+    addLanguage("Python")
+    addLanguage("GoLang")
+
+    function addOptiLanguage(langName) {
+        const li = document.createElement("li")
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector(".language").append(li)
+        // console.log(li)
+    }
+    addOptiLanguage("TypeScript")
+
+    
+    const secondLang = document.querySelector("li:nth-child(2)")
+    // console.log(secondLang)
+    // secondLang.innerHTML = "changed"
+    const newli = document.createElement("li")
+    newli.textContent = "changed"
+    secondLang.replaceWith(newli)
+    // console.log(newli)
+    
+    
+    // edit element
+
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = "<li>changedFirst</li>"
+
+    
+    // remove element
+
+    const lastLang = document.querySelector("li:last-child")    
+    lastLang.remove()
+    const secondLastLang = document.querySelector("li:last-child")
+    secondLastLang.remove()
+
+
+</script>
+
+</html>
