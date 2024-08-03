@@ -36,7 +36,7 @@ create edit remove element in DOM
 Events
 Async
 API || Ajax || XMLHtmlRequest
- V8 Engine
+V8 Engine
 
 
 
@@ -324,6 +324,15 @@ clearInterval()
 
 ## API || Ajax || XMLHtmlRequest
 ```
+const xhr = new XMLHtmlRequest()
+xhr.open("METHOD", API_URL)
+xhr.onreadystatechange = function(){
+        if(xhr.readyState == 4){
+            const data = JSON.parse(this.responseText)
+        }
+    }
+xhr.send()
+
 readyState
 0 - UNSENT - Client has been created.
 1 - OPENED - open() has been called.
