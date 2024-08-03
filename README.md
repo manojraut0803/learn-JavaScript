@@ -35,7 +35,8 @@ Relation in DOM
 create edit remove element in DOM
 Events
 Async
-
+API || Ajax || XMLHtmlRequest
+ V8 Engine
 
 
 
@@ -320,4 +321,18 @@ setInterval()
 clearTimeout()
 clearInterval()
 ```
+
+## API || Ajax || XMLHtmlRequest
+```
+readyState
+0 - UNSENT - Client has been created.
+1 - OPENED - open() has been called.
+2 - HEADERS_RECEIVED -  send() has been called, and headers and status are available.
+3 - LOADING Downloading - responseText holds partial data.
+4 - DONE -  The operation is complete.
+```
+
+### V8 Engine
+
+
 
