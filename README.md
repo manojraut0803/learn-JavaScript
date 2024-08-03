@@ -34,6 +34,8 @@ DOM
 Relation in DOM
 create edit remove element in DOM
 Events
+Async
+
 
 
 
@@ -310,6 +312,12 @@ Event Propagation
 e -> event
 e.stopPropagation()
 e.preventDefault()
+```
 
+```
+setTimeout()
+setInterval()
+clearTimeout()
+clearInterval()
 ```
 

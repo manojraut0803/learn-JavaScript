@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+
+    <div id="demo">Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
+
+    <button id="start">start</button>
+
+    <button id="stop">Stop</button>
+
+
+
+</body>
+<script>
+
+    // setTimeout()
+
+    function sayHello() {
+        console.log("hello")
+    }
+    // setTimeout(sayHello, 3000)
+
+    function changeDivText() {
+        document.querySelector('div').innerHTML = "Hello from javaScript"
+    }
+    // const changeMe = setTimeout(changeDivText, 2000)
+    // clearTimeout()
+
+    document.querySelector('#stop').addEventListener("click", (e) => {
+        // clearTimeout(changeMe)
+        // console.log("STOPPED")
+    })
+
+
+    // setInterval()
+
+    /*
+    function sayDate(str){
+        console.log(`hello ${str}`, Date.now())   
+    }
+    const intervalID = setInterval( sayDate, 3000, "there") 
+    clearInterval(intervalID)
+    */
+
+
+
+    let ref;
+
+    function sayDate() {
+        console.log("Date", Date())
+    }
+
+    function start() {
+        ref = setInterval(sayDate, 2000)
+    }
+    function stop() {
+        clearInterval(ref)
+    }
+
+    document.querySelector('#start').addEventListener("click", start)
+    document.querySelector('#stop').addEventListener("click", stop)
+
+
+
+
+
+</script>
+
+</html>
