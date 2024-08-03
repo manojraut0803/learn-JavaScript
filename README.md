@@ -33,6 +33,8 @@ Reduce
 DOM
 Relation in DOM
 create edit remove element in DOM
+Events
+
 
 
 
@@ -201,7 +203,7 @@ total <- 10
 
 ```
 
-### High order array loop
+# High order array loop
 
 1) for of
 ```
@@ -249,13 +251,13 @@ map
 const var = arr.map( (val)=> val + 2 )
 ```
 
-## chaining
+### chaining
 
 ```
 .map().map().filter()
 ```
 
-## reduce
+### reduce
 ```
 const array = [1, 2, 3, 4]
 const initialValue = 0
@@ -285,5 +287,29 @@ Child child relation
 
 ### edit and remove element
 
+## Events
+```
+.addEventListener()
+.attachEvent()
+jQuery -> .on()
 
+"
+document.getElementById('id').addEventListener("click", (e)=>{
+    ----
+    ----
+}, false)
+
+"
+
+Event Propagation
+    Event Bubbling -> false (inside to outside)
+    Event Capturing -> true (top to bottom)
+
+    Event SpilOver
+
+e -> event
+e.stopPropagation()
+e.preventDefault()
+
+```
 

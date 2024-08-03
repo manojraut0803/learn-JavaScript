@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML events</title>
+</head>
+
+<body style="background-color: #212121; color:azure">
+    <h1>Japan Gallery</h1>
+    <ul id="images">
+        <li><img width="200px" id="city" src="./pexels1.jpg" alt=""></li>
+        <li><img width="200px" id="kanji" src="./pexels2.jpg" alt=""></li>
+        <li><img width="200px" id="temple" src="./pexels3.jpg" alt=""></li>
+        <li><a style="color: aliceblue;" id="google" href="https://google.com">Google</a></li>
+    </ul>
+
+</body>
+<script>
+    // document.getElementById('kanji').onclick = (()=>{
+    //     alert("Sore wa kanji desu")
+    // })
+
+    // .addEventListener()
+    // .attachEvent()
+    // jQuery -> .on()
+
+    // document.getElementById('kanji').addEventListener("click",()=>{ alert("kanji") }, false)
+    // document.getElementById('kanji').addEventListener("click",(e)=>{ console.log(e), false })
+
+    // event propagation
+    // false => event bubbling  ||  inside to outside
+    // true => event capturing  ||  top to bottom
+
+    // document.getElementById('images').addEventListener("click", (e) => { console.log("click inside the ul") }, true)
+    // document.getElementById('kanji').addEventListener("click", (e) => { console.log("click kanji") }, true)
+
+    /*
+    document.getElementById('images').addEventListener("click", (e) => { 
+        console.log("click inside the ul") 
+    }, false)
+    document.getElementById('kanji').addEventListener("click", (e) => { 
+        console.log("click kanji") 
+        e.stopPropagation();
+    }, false)
+    
+    document.getElementById('google').addEventListener("click", (e)=>{
+        console.log("Google clicked")
+        e.stopPropagation();
+        e.preventDefault()
+    }, false)
+
+    */
+
+    document.querySelector('#images').addEventListener("click", (e) => {
+        // console.log(e.target)
+        // console.log(e.target.tagName)
+        // console.log(e.target.parentNode)
+
+        if (e.target.tagName === 'IMG') {
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+            // or
+            // removeIt.parentNode.removeChild(removeIt)
+        }
+        console.log(e.target.tagName)
+
+
+
+
+
+
+    }, false)
+
+
+
+
+
+</script>
+
+</html>
