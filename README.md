@@ -37,7 +37,9 @@ Events
 Async
 API || Ajax || XMLHtmlRequest
 V8 Engine
-
+Promise
+Aync await
+fetch
 
 
 
@@ -324,7 +326,7 @@ clearInterval()
 
 ## API || Ajax || XMLHtmlRequest
 ```
-const xhr = new XMLHtmlRequest()
+const xhr = new XMLHtmlRequest() 
 xhr.open("METHOD", API_URL)
 xhr.onreadystatechange = function(){
         if(xhr.readyState == 4){
@@ -343,5 +345,23 @@ readyState
 
 ### V8 Engine
 
+## Promise
+```
+operations:
+    file access
+    database request
+    cryptography
+
+states:
+    1) pending
+    2) fullfilled
+    3) rejected
+```
+
+## Aync await
+```
+try
+catch
+```
 
 
