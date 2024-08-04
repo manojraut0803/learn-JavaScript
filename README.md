@@ -35,14 +35,19 @@ Relation in DOM
 create edit remove element in DOM
 Events
 Async
-API || Ajax || XMLHtmlRequest
+Network API || Ajax || XMLHtmlRequest
 V8 Engine
 Promise
 Aync await
-fetch
-
-
-
+fetch API
+Object Oriented
+prototype   __proto__
+call and this
+Class Constructer and static
+Inheritance
+Bind
+Setter Getter and Stack Overflow
+Lexical Scoping and closure
 ```
 ### Variables
 - var
@@ -356,6 +361,11 @@ states:
     1) pending
     2) fullfilled
     3) rejected
+
+.then()
+.catch()
+.finally()
+
 ```
 
 ## Aync await
@@ -363,5 +373,13 @@ states:
 try
 catch
 ```
+## fetch
+```
+fetch("https://example.com/users")
+fetch("https://example.com/users", {any: object})
+```
+
+
+
 
 
